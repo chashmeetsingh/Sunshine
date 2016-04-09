@@ -1,13 +1,22 @@
-<?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <!-- NOTE: EditTextPreference accepts EditText attributes. -->
+    <!-- NOTE: EditTextPreference's summary should be set to its value by the activity code. -->
     <EditTextPreference
-        android:title="@string/pref_location_label"
-        android:key="@string/pref_location_key"
+        android:capitalize="words"
         android:defaultValue="@string/pref_location_default"
-        android:inputType="text"
-        android:singleLine="true" />
+        android:inputType="textCapWords"
+        android:key="@string/pref_location_key"
+        android:maxLines="1"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="@string/pref_location_label" />
+
+    <ListPreference
+        android:defaultValue="@string/prefs_units_metric"
+        android:entries="@array/pref_temp_units_options"
+        android:entryValues="@array/pref_temp_units_values"
+        android:key="@string/pref_temp_key"
+        android:title="@string/pref_temp_label" />
 
 </PreferenceScreen>
