@@ -2,7 +2,6 @@ package com.singh.cashrulz.sunshine;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -63,7 +62,6 @@ public class DetailActivity extends AppCompatActivity {
             setHasOptionsMenu(true);
         }
 
-        @Nullable
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
